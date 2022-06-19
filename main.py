@@ -1,4 +1,4 @@
-from data.GetProduct import get_product
+from data.GetProducts import get_products
 
 
-get_product('Xbox one fat')
+get_products('Xbox one fat')

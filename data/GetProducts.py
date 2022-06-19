@@ -4,8 +4,8 @@ import requests
 from models.Product import make_product
 
 
-def get_product(product):
-    product_index = product.replace(' ', '-')
+def get_products(product_name):
+    product_index = product_name.strip().replace(' ', '-')
 
     url = f'https://games.mercadolivre.com.br/consoles/{product_index}_NoIndex_True'
     layout_class = 'ui-search-layout__item'
