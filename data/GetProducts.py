@@ -7,7 +7,7 @@ from models.Product import make_product
 def get_products(product_name):
     product_index = product_name.strip().replace(' ', '-')
 
-    url = f'https://games.mercadolivre.com.br/consoles/{product_index}_NoIndex_True'
+    url = f'https://lista.mercadolivre.com.br/{product_index}'
     layout_class = 'ui-search-layout__item'
     img_class = 'ui-search-result-image__element' 
     price_class = 'price-tag-fraction'
@@ -30,5 +30,8 @@ def get_products(product_name):
         ''')
 
         formattedProducts.append(make_product(title, image, price))
+
+    if (len(products) == 0):
+        print('No items where found.')
 
     return formattedProducts
